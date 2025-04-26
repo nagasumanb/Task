@@ -1,0 +1,24 @@
+<h1>Hello world</h1>
+
+
+<h1>My App</h1>
+
+<div class="colorButtons">
+  <button (click)="changeColor('red')">Red</button>
+
+  <button (click)="changeColor('green')">Green</button>
+  
+  <button (click)="changeColor('blue')">Blue</button>
+</div> 
+
+<input type="range" min="50" max="500" [(ngModel)]="width"/>
+
+<input type="range" min="50" max="500" [(ngModel)]="height" />
+
+<div class="box" [style.background-color]="boxColor" [style.transform]="'rotate(' + rotation + 'deg)'" 
+[style.width.px]="width"
+[style.height.px]="height"></div>
+
+<Button (click)="rotateBox('plus')">+</Button>
+
+<Button (click)="rotateBox('minus')">-</Button>
